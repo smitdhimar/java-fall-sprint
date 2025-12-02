@@ -15,8 +15,7 @@ public class DatabaseConnection {
 
     public static Connection getConnection() throws SQLException{
         return DriverManager.getConnection(
-//                DbConfig.getDatabaseUrl(),
-                "jdbc:mysql://java-fall-sprint.cg16o4ceuq44.us-east-1.rds.amazonaws.com:3306/?useSSL=false&serverTimezone=UTC",
+                DbConfig.getDatabaseUrl(),
                 DbConfig.getDatabaseUser(),
                 DbConfig.getDatabasePassword()
         );

@@ -7,6 +7,8 @@ public class Crud {
     public static boolean checkConnection(){
         try(Connection con = DatabaseConnection.getConnection();){
             System.out.println("SUCCESSS: Connection established successfull");
+
+
             return true;
         }
         catch (Exception e){
