@@ -4,6 +4,8 @@ out/
 !**/src/test/**/out/
 .kotlin
 
+#environment variables file
+.env
 ### Eclipse ###
 .apt_generated
 .classpath
