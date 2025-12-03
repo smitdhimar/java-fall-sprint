@@ -8,7 +8,8 @@ public class Main {
 
         if(isConnection){
 //            Crud.createTable();
-            Crud.addUser("Smit", "smitdhimar61@gmail.com");
+//            Crud.addUser("Smit", "smitdhimar61@gmail.com");
+            Crud.deleteUser(1);
             Crud.getAllUsers();
         }
     }

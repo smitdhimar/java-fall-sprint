@@ -65,4 +65,16 @@ public class Crud {
             System.out.println("FAILURE: Some error in getAllUsers(): "+ e);
         }
     }
+    public static void deleteUser(int id){
+        String query = String.format("delete from users where id = %d ", id);
+        try(
+                Connection con = DatabaseConnection.getConnection();
+                PreparedStatement stmt = con.prepareStatement(query);
+                ){
+            stmt.execute();
+        }
+        catch (Exception e){
+            System.out.println("FAILURE: Error while deleting User");
+        }
+    }
 }
