@@ -8,7 +8,7 @@ public class Main {
         try {
 
 //            implement executor and autocloseable
-            ExecutorService executor = Executors.newFixedThreadPool(10);
+            ExecutorService executor = Executors.newFixedThreadPool(8);
 
             long startTime = System.currentTimeMillis();
 
@@ -30,7 +30,7 @@ public class Main {
             }
             long endTime = System.currentTimeMillis();
 
-            System.out.println("Time taken to complete is : "+ (endTime-startTime)/1000);
+            System.out.println("Time taken to complete is : "+ (endTime-startTime));
 
         } catch (Exception e) {
             System.out.print("FAILURE: Error in ExecutorServiceImplementation " + e);
