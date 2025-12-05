@@ -1,5 +1,6 @@
 package MultithreadingAndConcurrency.ExecutorServiceImplementation;
 
+import MultithreadingAndConcurrency.Utils.Factorial;
 import java.util.concurrent.*;
 
 public class Main {
@@ -16,7 +17,7 @@ public class Main {
                 int taskNumber = i;
 
                 executor.submit(() -> {
-                    int fact = factorial(taskNumber);
+                    int fact = Factorial.factorial(taskNumber)
                     System.out.println("factorial of "+ taskNumber + " is "+ fact);
                     return fact;
                 });
@@ -40,16 +41,5 @@ public class Main {
 
     }
 
-    public static int factorial(int n) {
-        try {
 
-            Thread.sleep(100);
-            if (n == 1) {
-                return 1;
-            }
-            return n * factorial(n - 1);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
 }
