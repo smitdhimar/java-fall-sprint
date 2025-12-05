@@ -8,7 +8,7 @@ public class Main {
         try {
 
 //            implement executor and autocloseable
-            ExecutorService executor = Executors.newFixedThreadPool(8);
+            ExecutorService executor = Executors.newCachedThreadPool();
 
             long startTime = System.currentTimeMillis();
 
@@ -20,6 +20,7 @@ public class Main {
                     System.out.println("factorial of "+ taskNumber + " is "+ fact);
                     return fact;
                 });
+
             }
 
             executor.shutdown();
