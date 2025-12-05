@@ -17,7 +17,7 @@ public class Main {
                 int taskNumber = i;
 
                 executor.submit(() -> {
-                    int fact = Factorial.factorial(taskNumber)
+                    int fact = Factorial.factorial(taskNumber);
                     System.out.println("factorial of "+ taskNumber + " is "+ fact);
                     return fact;
                 });
